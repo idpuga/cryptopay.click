@@ -1,58 +1,92 @@
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cryptopay.click - Simplify Crypto Payments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logoCP1.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <img src="logoCP1.png" alt="cryptopay.click Logo" class="logo">
+        <nav class="navigation">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#contact">Contact</a>
+            <button class="wallet-button connect-wallet">Connect Wallet</button>
+        </nav>
+    </header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Simplify Crypto Payments with cryptopay.click</h1>
-    <p>Create payment links effortlessly. Accept crypto payments in seconds.</p>
-    <button class="cta-button">Get Started</button>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Simplify Crypto Payments with cryptopay.click</h1>
+        <p>Create payment links effortlessly. Accept crypto payments in seconds.</p>
+        <button class="cta-button generate-link">Generate New Link</button>
+    </section>
 
-<!-- Introduction Section -->
-<section class="introduction">
-    <p>cryptopay.click allows you to easily generate payment links to accept cryptocurrency, starting with popular EVM-compatible chains like Ethereum, Base, and Boba Network. It’s secure, fast, and makes receiving crypto payments as easy as sharing a link.</p>
-</section>
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <p>cryptopay.click allows you to easily generate payment links to accept cryptocurrency, starting with popular EVM-compatible chains like Ethereum, Base, and Boba Network. It’s secure, fast, and makes receiving crypto payments as easy as sharing a link.</p>
+    </section>
 
-<!-- How It Works Section -->
-<section id="how-it-works" class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-        <div class="step">
-            <h3>1. Connect Your Wallet</h3>
-            <p>Click 'Connect Wallet' to link your crypto wallet.</p>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Connect Your Wallet</h3>
+                <p>Click 'Connect Wallet' to link your crypto wallet.</p>
+            </div>
+            <div class="step">
+                <h3>2. Create a Payment Link</h3>
+                <p>Set up your payment request—choose the amount, currency, and description.</p>
+            </div>
+            <div class="step">
+                <h3>3. Share and Get Paid</h3>
+                <p>Share your custom link, and receive payments directly to your wallet.</p>
+            </div>
         </div>
-        <div class="step">
-            <h3>2. Create a Payment Link</h3>
-            <p>Set up your payment request—choose the amount, currency, and description.</p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Why Choose cryptopay.click?</h2>
+        <ul>
+            <li><strong>Trust and Security:</strong> Built with web3 technology for secure, peer-to-peer transactions.</li>
+            <li><strong>Fast and Easy Setup:</strong> No account creation, just connect your wallet and start receiving payments.</li>
+            <li><strong>Multi-Chain Support:</strong> Starting with popular EVM chains, with plans to expand to more networks like Solana.</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <blockquote>"cryptopay.click made accepting crypto payments incredibly easy! Highly recommend."</blockquote>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">FAQs</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
         </div>
-        <div class="step">
-            <h3>3. Share and Get Paid</h3>
-            <p>Share your custom link, and receive payments directly to your wallet.</p>
-        </div>
-    </div>
-</section>
+        <button class="wallet-button connect-wallet">Connect Wallet</button>
+    </footer>
 
-<!-- Benefits Section -->
-<section class="benefits">
-    <h2>Why Choose cryptopay.click?</h2>
-    <ul>
-        <li><strong>Trust and Security:</strong> Built with web3 technology for secure, peer-to-peer transactions.</li>
-        <li><strong>Fast and Easy Setup:</strong> No account creation, just connect your wallet and start receiving payments.</li>
-        <li><strong>Multi-Chain Support:</strong> Starting with popular EVM chains, with plans to expand to more networks like Solana.</li>
-    </ul>
-</section>
+    <script>
+        // JavaScript to handle wallet connection and link generation
+        document.querySelectorAll('.connect-wallet').forEach(button => {
+            button.addEventListener('click', () => {
+                // Logic to connect wallet
+                alert('Wallet connected (demo purpose)');
+                document.querySelector('.generate-link').style.display = 'block';
+            });
+        });
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <h2>What Our Users Say</h2>
-    <blockquote>"cryptopay.click made accepting crypto payments incredibly easy! Highly recommend."</blockquote>
-</section>
-
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-links">
-        <a href="#">FAQs</a>
-        <a href="#contact">Contact</a>
-        <a href="#">Privacy Policy</a>
-    </div>
-    <button class="wallet-button">Connect Wallet</button>
-</footer>
+        document.querySelector('.generate-link').addEventListener('click', () => {
+            window.location.href = 'https://generate.cryptopay.click';
+        });
+   
